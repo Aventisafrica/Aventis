@@ -1,0 +1,480 @@
+<html>
+<head>
+  <base href="Our%20services.html">
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="google8158a2140bd2ec9e">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aventis Africa empowers remote African communities...">
+  <meta name="keywords" content="Aventis Africa, digital solutions...">
+  <meta name="author" content="Aventis Africa">
+
+  <link rel="icon" href="https://res.cloudinary.com/your-cloudinary-link/image/upload/v12345/your-image.png" type="image/png">
+
+  <title>Aventis - Connecting African Communities to the Digital World</title>
+  <style>
+:root {
+    --primary: #ebebeb;
+    --secondary: #f3b200;
+    --accent: #FFD700;
+    --background: #df6604;
+    --text: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.nav-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: rgba(26, 26, 26, 0);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.featured-artists {
+    padding-top: 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--accent);
+}
+
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.artist-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.artist-card:hover {
+    transform: translateY(-10px);
+}
+
+.artist-header {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.artist-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.artist-profile {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--background);
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+}
+
+.artist-info {
+    padding: 4rem 1.5rem 1.5rem;
+    text-align: center;
+}
+
+.artist-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.artist-specialty {
+    color: var(--accent);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.artist-bio {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.artist-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.artist-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background: rgba(255, 107, 53, 0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.connect-btn {
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    font-weight: bold;
+}
+
+.connect-btn:hover {
+    transform: scale(1.05);
+}
+
+.tag-cloud-container {
+    height: 400px;
+    position: relative;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+.filter-section {
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 15px;
+    margin: 2rem;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.filter-input {
+    background: rgba(8, 8, 8, 0.979);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.8rem;
+    border-radius: 8px;
+    color: var(--text);
+    width: 100%;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.featured-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--accent);
+    color: var(--background);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+</style>
+</head>
+<body>
+
+    <div class="nav-wrapper">
+        <nav>
+            <a href="artists.html" class="logo">Aventis</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="artists.html">Artists</a>
+                <a href="events.html">Events</a>
+                <a href="artwork.html">Artwork</a>
+            </div>
+        </nav>
+    </div>
+    
+
+<section class="featured-artists">
+    <h1 class="section-title">Featured African Artists</h1>
+    
+    <div class="filter-section">
+        <div class="filter-grid">
+            <input type="text" class="filter-input" placeholder="Search artists...">
+            <select class="filter-input">
+                <option value="">Art Style</option>
+                <option value="contemporary">Contemporary</option>
+                <option value="traditional">Traditional</option>
+                <option value="mixed-media">Mixed Media</option>
+                <option value="digital">Digital Art</option>
+            </select>
+            <select class="filter-input">
+                <option value="">Location</option>
+                <option value="west-africa">West Africa</option>
+                <option value="east-africa">East Africa</option>
+                <option value="north-africa">North Africa</option>
+                <option value="south-africa">South Africa</option>
+            </select>
+            <select class="filter-input">
+                <option value="">Sort By</option>
+                <option value="popularity">Popularity</option>
+                <option value="recent">Most Recent</option>
+                <option value="exhibitions">Most Exhibitions</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="tag-cloud-container" id="tagCloud"></div>
+
+    <div class="artists-grid">
+        <div class="artist-card">
+            <div class="artist-header">
+                <img src="https://res.cloudinary.com/dfedn2xsg/image/upload/v1729871308/IMG_20241025_184225_qkdemq.png" alt="Artist studio with paintings" class="artist-cover">
+                <img src="https://res.cloudinary.com/dfedn2xsg/image/upload/v1729871308/IMG_20241025_184225_qkdemq.png" alt="Artist portrait" class="artist-profile">
+                <div class="featured-badge">Featured Artist</div>
+            </div>
+            <div class="artist-info">
+                <h3 class="artist-name">Amara Okafor</h3>
+                <p class="artist-specialty">Contemporary Mixed Media Artist</p>
+                <p class="artist-bio">Creating powerful narratives through a blend of traditional African techniques and modern expressions. Based in Lagos, Nigeria.</p>
+                <div class="artist-stats">
+                    <div class="stat">
+                        <div class="stat-number">45</div>
+                        <div class="stat-label">Exhibitions</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">12K</div>
+                        <div class="stat-label">Followers</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">89</div>
+                        <div class="stat-label">Artworks</div>
+                    </div>
+                </div>
+                <div class="artist-tags">
+                    <span class="tag">Mixed Media</span>
+                    <span class="tag">Contemporary</span>
+                    <span class="tag">Social Impact</span>
+                </div>
+                <button class="connect-btn">Connect & Collaborate</button>
+            </div>
+        </div>
+
+        <div class="artist-card">
+            <div class="artist-header">
+                <img src="https://res.cloudinary.com/dfedn2xsg/image/upload/v1729871307/IMG_20241025_184550_zxk0qx.png" alt="Sculpture studio" class="artist-cover">
+                <img src="https://source.unsplash.com/random/200x200?sculptor" alt="Sculptor portrait" class="artist-profile">
+            </div>
+            <div class="artist-info">
+                <h3 class="artist-name">Kwame Mensah</h3>
+                <p class="artist-specialty">Traditional Sculptor</p>
+                <p class="artist-bio">Specializing in wood and bronze sculptures that celebrate African heritage and storytelling. Workshop based in Accra, Ghana.</p>
+                <div class="artist-stats">
+                    <div class="stat">
+                        <div class="stat-number">28</div>
+                        <div class="stat-label">Exhibitions</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">8K</div>
+                        <div class="stat-label">Followers</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">56</div>
+                        <div class="stat-label">Artworks</div>
+                    </div>
+                </div>
+                <div class="artist-tags">
+                    <span class="tag">Sculpture</span>
+                    <span class="tag">Traditional</span>
+                    <span class="tag">Heritage</span>
+                </div>
+                <button class="connect-btn">Connect & Collaborate</button>
+            </div>
+        </div>
+
+        <div class="artist-card">
+            <div class="artist-header">
+                <img src="https://res.cloudinary.com/dfedn2xsg/image/upload/v1729871308/IMG_20241025_184248_ehc87u.png" alt="Digital art studio" class="artist-cover">
+                <img src="https://source.unsplash.com/random/200x200?digital+artist" alt="Digital artist portrait" class="artist-profile">
+            </div>
+            <div class="artist-info">
+                <h3 class="artist-name">Zainab Ahmed</h3>
+                <p class="artist-specialty">Digital Artist & Animator</p>
+                <p class="artist-bio">Pushing the boundaries of digital art with Afrofuturistic themes and innovative animation techniques. Based in Nairobi, Kenya.</p>
+                <div class="artist-stats">
+                    <div class="stat">
+                        <div class="stat-number">15</div>
+                        <div class="stat-label">Exhibitions</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">20K</div>
+                        <div class="stat-label">Followers</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">120</div>
+                        <div class="stat-label">Artworks</div>
+                    </div>
+                </div>
+                <div class="artist-tags">
+                    <span class="tag">Digital Art</span>
+                    <span class="tag">Animation</span>
+                    <span class="tag">Afrofuturism</span>
+                </div>
+                <button class="connect-btn">Connect & Collaborate</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+// Tag Cloud Animation
+const tags = [
+    'Contemporary', 'Traditional', 'Sculpture', 'Painting',
+    'Digital Art', 'Mixed Media', 'Photography', 'Installation',
+    'Performance', 'Textile Art', 'Ceramics', 'Printmaking',
+    'Animation', 'Street Art', 'Conceptual Art', 'Folk Art'
+];
+
+const tagCloud = TagCloud('.tag-cloud-container', tags, {
+    radius: 230,
+    maxSpeed: 'fast',
+    initSpeed: 'fast',
+    direction: 135,
+    keep: true,
+    useContainerInlineStyles: true,
+    containerClass: 'tag-cloud',
+    itemClass: 'tag-cloud-item',
+    useHTML: true
+});
+
+// GSAP Animations
+gsap.from(".artist-card", {
+    duration: 1,
+    y: 100,
+    opacity: 0,
+    stagger: 0.2,
+    ease: "power2.out"
+});
+
+// Artist Card Hover Effects
+document.querySelectorAll('.artist-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        gsap.to(card, {
+            scale: 1.02,
+            duration: 0.3
+        });
+    });
+
+    card.addEventListener('mouseleave', () => {
+        gsap.to(card, {
+            scale: 1,
+            duration: 0.3
+        });
+    });
+});
+
+// Connect Button Animation
+document.querySelectorAll('.connect-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        gsap.to(e.target, {
+            scale: 0.95,
+            duration: 0.1,
+            yoyo: true,
+            repeat: 1
+        });
+    });
+});
+
+// Filter Animation
+document.querySelectorAll('.filter-input').forEach(input => {
+    input.addEventListener('change', () => {
+        gsap.from(".artists-grid", {
+            duration: 0.5,
+            opacity: 0,
+            y: 20,
+            ease: "power2.out"
+        });
+    });
+});
+</script>
+
+</body>
+</html>
