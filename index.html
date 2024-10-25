@@ -26,6 +26,43 @@
       background-color: var(--bg-color);
       color: var(--text-color);
     }
+
+    .nav-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: rgba(26, 26, 26, 0.027);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
     
     .container {
       max-width: 1200px;
@@ -42,12 +79,12 @@
       align-items: center;
     }
     
-    .logo {
+    .logon {
       display: flex;
       align-items: center;
     }
     
-    .logo img {
+    .logon img {
       margin-right: 10px;
     }
     
@@ -367,19 +404,25 @@
   </style>
   </head>
   <body>
+       
+      <div class="nav-wrapper">
+          <nav>
+              <a href="index.html" class="logo">Aventis</a>
+              <div class="nav-links">
+                  <a href="index.html">Home</a>
+                  <a href="artists.html">Artists</a>
+                  <a href="events.html">Events</a>
+                  <a href="artwork.html">Artwork</a>
+              </div>
+          </nav>
+      </div>
+    
     <header>
       <div class="container">
-        <div class="logo">
+        <div class="logon">
           <img src="https://res.cloudinary.com/dfedn2xsg/image/upload/v1729263131/Aventis_am5laj.gif" 
           alt="Aventis logo - stylized A in blue and yellow" width="200" height="200">
           <h1>Aventis</h1>
-        </div>
-        <nav>
-          <ul>
-          
-          </ul>
-        </nav>
-      </div>
     </header>
     
     <main>
@@ -433,11 +476,11 @@
               <p>Communities Reached</p>
             </div>
             <div class="stat">
-              <p>10,000+</p>
+              <p>46,000+</p>
               <p>People Trained</p>
             </div>
             <div class="stat">
-              <p>500+</p>
+              <p>502+</p>
               <p>Leaders Developed</p>
             </div>
           </div>
