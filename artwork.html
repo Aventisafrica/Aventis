@@ -1,514 +1,484 @@
-<html>
-<head>
-  <base href="Our%20services.html">
-  <meta charset="UTF-8">
-  <meta name="google-site-verification" content="google8158a2140bd2ec9e">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aventis Africa empowers remote African communities...">
-  <meta name="keywords" content="Aventis Africa, digital solutions...">
-  <meta name="author" content="Aventis Africa">
-
-  <link rel="icon" href="https://res.cloudinary.com/your-cloudinary-link/image/upload/v12345/your-image.png" type="image/png">
-
-  <title>Aventis - Connecting African Communities to the Digital World</title>
-  <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap');
-
-:root {
-    --primary: #ffffff;
-    --secondary: #f37601;
-    --accent: #FFD700;
-    --background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://res.cloudinary.com/dfedn2xsg/image/upload/v1729507328/DALL_E_2024-10-21_13.37.15_-_A_stunning_African_sunset_with_sunrays_reflecting_on_the_iconic_silhouettes_of_acacia_and_baobab_trees._The_golden-orange_sky_blends_into_shades_of_pi_tdvsl8.webp');
-    --text: #FFFFFF;
-    --card-bg: rgba(255, 255, 255, 0.05);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Raleway', sans-serif;
-    background: var(--background);
-    color: var(--text);
-    min-height: 100vh;
-}
-
-.nav-wrapper {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 1rem 2rem;
-    background: rgba(26, 26, 26, 0.034);
-    backdrop-filter: blur(10px);
-    z-index: 100;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: var(--accent);
-    text-decoration: none;
-}
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-links a {
-    color: var(--text);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--accent);
-}
-
-.upload-container {
-    padding-top: 100px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 120px 2rem 2rem;
-}
-
-.section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--accent);
-}
-
-.upload-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-@media (max-width: 768px) {
-    .upload-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.upload-form {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 15px;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: var(--accent);
-}
-
-input[type="text"],
-textarea,
-select {
-    width: 100%;
-    padding: 0.8rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    color: var(--text);
-    font-family: 'Raleway', sans-serif;
-}
-
-textarea {
-    height: 120px;
-    resize: vertical;
-}
-
-.tag-input-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    padding: 0.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    min-height: 45px;
-}
-
-.tag {
-    background: rgba(255, 107, 53, 0.2);
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.tag-remove {
-    cursor: pointer;
-    color: var(--accent);
-}
-
-.tag-input {
-    border: none;
-    background: none;
-    color: var(--text);
-    flex: 1;
-    min-width: 100px;
-    padding: 0.3rem;
-}
-
-.tag-input:focus {
-    outline: none;
-}
-
-.submit-btn {
-    background: var(--primary);
-    color: white;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    font-weight: bold;
-    width: 100%;
-    margin-top: 1rem;
-}
-
-.submit-btn:hover {
-    transform: scale(1.05);
-}
-
-.preview-container {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 15px;
-}
-
-.preview-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--accent);
-}
-
-.preview-card {
-    background: rgba(255, 255, 255, 0.02);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.preview-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    background: rgba(255, 255, 255, 0.05);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.preview-info {
-    padding: 1.5rem;
-}
-
-.preview-stats {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.progress-bar {
-    width: 100%;
-    height: 4px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 2px;
-    margin-top: 2rem;
-    position: relative;
-}
-
-.progress {
-    position: absolute;
-    height: 100%;
-    background: var(--accent);
-    width: 0;
-    border-radius: 2px;
-    transition: width 0.3s ease;
-}
-
-.upload-tips {
-    margin-top: 2rem;
-    padding: 1rem;
-    background: rgba(255, 107, 53, 0.1);
-    border-radius: 8px;
-}
-
-.tip-list {
-    list-style: none;
-    padding-left: 1rem;
-}
-
-.tip-list li {
-    margin-bottom: 0.5rem;
-    position: relative;
-}
-
-.tip-list li::before {
-    content: "•";
-    color: var(--accent);
-    position: absolute;
-    left: -1rem;
-}
-
-/* FilePond customization */
-.filepond--panel-root {
-    background-color: rgba(255, 255, 255, 0.05) !important;
-}
-
-.filepond--drop-label {
-    color: var(--text) !important;
-}
-
-.filepond--label-action {
-    color: var(--accent) !important;
-}
-</style>
-</head>
-<body>
-
-    <div class="nav-wrapper">
-        <nav>
-            <a href="artwork.html" class="logo">Aventis</a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="artists.html">Artists</a>
-                <a href="events.html">Events</a>
-                <a href="artwork.html">Artwork</a>
-            </div>
-        </nav>
-    </div>    
-
-<div class="upload-container">
-    <h1 class="section-title">Share Your Artwork</h1>
+   <html>
+      <head>
+        <base href="Our%20services.html">
+        <meta charset="UTF-8">
+        <meta name="google-site-verification" content="google8158a2140bd2ec9e">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Aventis Africa empowers remote African communities...">
+        <meta name="keywords" content="Aventis Africa, digital solutions...">
+        <meta name="author" content="Aventis Africa">
+      
+        <link rel="icon" href="https://res.cloudinary.com/your-cloudinary-link/image/upload/v12345/your-image.png" type="image/png">
+      
+        <title>Aventis - Connecting African Communities to the Digital World</title>
+        <style>
+      :root {
+          --primary: #ebebeb;
+          --secondary: #f3b200;
+          --accent: #FFD700;
+          --background: #df6604;
+          --text: #ffffff;
+          --card-bg: rgba(255, 255, 255, 0.05);
+      }
+      
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      
+      body {
+          font-family: 'Raleway', sans-serif;
+          background: var(--background);
+          color: var(--text);
+          min-height: 100vh;
+          overflow-x: hidden;
+      }
+      
+      .nav-wrapper {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          padding: 1rem 2rem;
+          background: rgba(26, 26, 26, 0);
+          backdrop-filter: blur(10px);
+          z-index: 100;
+      }
+      
+      nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          max-width: 1400px;
+          margin: 0 auto;
+      }
+      
+      .logo {
+          font-family: 'Playfair Display', serif;
+          font-size: 2rem;
+          color: var(--accent);
+          text-decoration: none;
+      }
+      
+      .nav-links {
+          display: flex;
+          gap: 2rem;
+      }
+      
+      .nav-links a {
+          color: var(--text);
+          text-decoration: none;
+          transition: color 0.3s ease;
+      }
+      
+      .nav-links a:hover {
+          color: var(--accent);
+      }
+      
+      .featured-artists {
+          padding-top: 100px;
+          max-width: 1400px;
+          margin: 0 auto;
+      }
+      
+      .section-title {
+          font-family: 'Playfair Display', serif;
+          font-size: 2.5rem;
+          text-align: center;
+          margin-bottom: 2rem;
+          color: var(--accent);
+      }
+      
+      .artists-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          gap: 2rem;
+          padding: 2rem;
+      }
+      
+      .artist-card {
+          background: var(--card-bg);
+          border-radius: 15px;
+          overflow: hidden;
+          transition: transform 0.3s ease;
+          position: relative;
+      }
+      
+      .artist-card:hover {
+          transform: translateY(-10px);
+      }
+      
+      .artist-header {
+          position: relative;
+          height: 500px;
+          overflow: hidden;
+      }
+      
+      .artist-cover {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+      
+      .artist-profile {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          border: 4px solid var(--background);
+          position: absolute;
+          bottom: -60px;
+          left: 50%;
+          transform: translateX(-50%);
+          object-fit: cover;
+      }
+      
+      .artist-info {
+          padding: 4rem 1.5rem 1.5rem;
+          text-align: center;
+      }
+      
+      .artist-name {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+          font-family: 'Playfair Display', serif;
+      }
+      
+      .artist-specialty {
+          color: var(--accent);
+          font-size: 0.9rem;
+          margin-bottom: 1rem;
+      }
+      
+      .artist-bio {
+          font-size: 0.9rem;
+          color: rgba(255, 255, 255, 0.8);
+          margin-bottom: 1rem;
+          line-height: 1.6;
+      }
+      
+      .artist-stats {
+          display: flex;
+          justify-content: center;
+          gap: 2rem;
+          margin-bottom: 1rem;
+      }
+      
+      .stat {
+          text-align: center;
+      }
+      
+      .stat-number {
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: var(--accent);
+      }
+      
+      .stat-label {
+          font-size: 0.8rem;
+          color: rgba(255, 255, 255, 0.6);
+      }
+      
+      .artist-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          justify-content: center;
+          margin-bottom: 1rem;
+      }
+      
+      .tag {
+          background: rgba(255, 107, 53, 0.2);
+          padding: 0.3rem 0.8rem;
+          border-radius: 20px;
+          font-size: 0.8rem;
+      }
+      
+      .connect-btn {
+          background: var(--primary);
+          color: white;
+          padding: 0.8rem 1.5rem;
+          border: none;
+          border-radius: 25px;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+          font-weight: bold;
+      }
+      
+      .connect-btn:hover {
+          transform: scale(1.05);
+      }
+      
+      .tag-cloud-container {
+          height: 400px;
+          position: relative;
+          margin: 2rem auto;
+          width: 100%;
+          max-width: 600px;
+      }
+      
+      .filter-section {
+          padding: 2rem;
+          background: var(--card-bg);
+          border-radius: 15px;
+          margin: 2rem;
+      }
+      
+      .filter-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 1rem;
+      }
+      
+      .filter-input {
+          background: rgba(8, 8, 8, 0.979);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          padding: 0.8rem;
+          border-radius: 8px;
+          color: var(--text);
+          width: 100%;
+      }
+      
+      @keyframes pulse {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.05); }
+          100% { transform: scale(1); }
+      }
+      
+      .featured-badge {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          background: var(--accent);
+          color: var(--background);
+          padding: 0.5rem 1rem;
+          border-radius: 20px;
+          font-size: 0.8rem;
+          font-weight: bold;
+          animation: pulse 2s infinite;
+      }
+      </style>
+      </head>
+      <body>
+      
     
-    <div class="upload-grid">
-        <div class="upload-form">
-            <form id="artworkForm">
-                <div class="form-group">
-                    <label for="artwork">Artwork Upload</label>
-                    <input type="file" class="filepond" name="artwork" multiple>
-                </div>
-
-                <div class="form-group">
-                    <label for="title">Artwork Title</label>
-                    <input type="text" id="title" name="title" placeholder="Enter the title of your artwork">
-                </div>
-
-                <div class="form-group">
-                    <label for="description">Description</label>
-                    <textarea id="description" name="description" placeholder="Tell us about your artwork..."></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="category">Category</label>
-                    <select id="category" name="category">
-                        <option value="">Select a category</option>
-                        <option value="painting">Painting</option>
-                        <option value="sculpture">Sculpture</option>
-                        <option value="digital">Digital Art</option>
-                        <option value="photography">Photography</option>
-                        <option value="mixed-media">Mixed Media</option>
-                        <option value="traditional">Traditional Art</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label>Tags</label>
-                    <div class="tag-input-container">
-                        <div id="tags"></div>
-                        <input type="text" class="tag-input" placeholder="Add tags (press Enter)">
-                    </div>
-                </div>
-
-                <button type="submit" class="submit-btn">Share Artwork</button>
-            </form>
-        </div>
-
-        <div class="preview-container">
-            <h2 class="preview-title">Preview</h2>
-            <div class="preview-card">
-                <div class="preview-image" id="previewImage">
-                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                        <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                        <polyline points="21 15 16 10 5 21"></polyline>
-                    </svg>
-                </div>
-                <div class="preview-info">
-                    <h3 id="previewTitle">Artwork Title</h3>
-                    <p id="previewDescription">Your artwork description will appear here...</p>
-                    <div id="previewTags"></div>
-                    <div class="preview-stats">
-                        <span>0 Views</span>
-                        <span>0 Likes</span>
-                        <span>0 Comments</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="progress-bar">
-                <div class="progress" id="uploadProgress"></div>
-            </div>
-
-            <div class="upload-tips">
-                <h3>Tips for Better Visibility:</h3>
-                <ul class="tip-list">
-                    <li>Use high-quality images (minimum 1200px width)</li>
-                    <li>Add relevant tags to help others discover your work</li>
-                    <li>Write a detailed description of your creative process</li>
-                    <li>Mention the materials and techniques used</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-// Initialize FilePond
-FilePond.registerPlugin(FilePondPluginImagePreview);
-
-const pond = FilePond.create(document.querySelector('.filepond'), {
-    allowMultiple: false,
-    acceptedFileTypes: ['image/*'],
-    imagePreviewHeight: 300,
-    onaddfile: (error, file) => {
-        if (error) return;
-        const reader = new FileReader();
-        reader.onload = (e) => {
-            document.getElementById('previewImage').innerHTML = `
-                <img src="${e.target.result}" style="width: 100%; height: 100%; object-fit: cover;">
-            `;
-        };
-        reader.readAsDataURL(file.file);
-    }
-});
-
-// Tag Management
-const tagInput = document.querySelector('.tag-input');
-const tagsContainer = document.getElementById('tags');
-const previewTags = document.getElementById('previewTags');
-let tags = [];
-
-function addTag(tag) {
-    if (tag && !tags.includes(tag)) {
-        tags.push(tag);
-        renderTags();
-        renderPreviewTags();
-    }
-}
-
-function removeTag(tag) {
-    tags = tags.filter(t => t !== tag);
-    renderTags();
-    renderPreviewTags();
-}
-
-function renderTags() {
-    tagsContainer.innerHTML = tags.map(tag => `
-        <span class="tag">
-            ${tag}
-            <span class="tag-remove" onclick="removeTag('${tag}')">&times;</span>
-        </span>
-    `).join('');
-}
-
-function renderPreviewTags() {
-    previewTags.innerHTML = tags.map(tag => `
-        <span class="tag">${tag}</span>
-    `).join('');
-}
-
-tagInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-        e.preventDefault();
-        const tag = e.target.value.trim();
-        if (tag) {
-            addTag(tag);
-            e.target.value = '';
-        }
-    }
-});
-
-// Live Preview Updates
-document.getElementById('title').addEventListener('input', (e) => {
-    document.getElementById('previewTitle').textContent = e.target.value || 'Artwork Title';
-});
-
-document.getElementById('description').addEventListener('input', (e) => {
-    document.getElementById('previewDescription').textContent = e.target.value || 'Your artwork description will appear here...';
-});
-
-// Form Submission
-document.getElementById('artworkForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
+      </style>
+    </head>
+    <body>
     
-    // Simulate upload progress
-    const progress = document.getElementById('uploadProgress');
-    let width = 0;
-    const interval = setInterval(() => {
-        if (width >= 100) {
-            clearInterval(interval);
-            // Show success message
-            gsap.to('.submit-btn', {
-                backgroundColor: '#4CAF50',
-                duration: 0.3
-            });
-            document.querySelector('.submit-btn').textContent = 'Successfully Shared!';
-        } else {
-            width++;
-            progress.style.width = width + '%';
-        }
-    }, 50);
-
-    // Animate form submission
-    gsap.from('.upload-form', {
-        scale: 0.98,
-        duration: 0.3,
-        ease: 'power2.out'
-    });
-});
-
-// GSAP Animations
-gsap.from('.upload-container', {
-    opacity: 0,
-    y: 50,
-    duration: 1,
-    ease: 'power3.out'
-});
-
-gsap.from('.upload-grid > div', {
-    opacity: 0,
-    y: 30,
-    duration: 0.8,
-    stagger: 0.2,
-    ease: 'power2.out'
-});
-</script>
-
-</body>
-</html>
+        <div class="nav-wrapper">
+            <nav>
+                <a href="artists.html" class="logo">Aventis</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="artists.html">Artists</a>
+                    <a href="events.html">Events</a>
+                    <a href="artwork.html">Artwork</a>
+                </div>
+            </nav>
+        </div>
+        
+      
+      <section class="featured-artists">
+          <h1 class="section-title">PRODUCTS</h1>
+          
+          <div class="filter-section">
+              <div class="filter-grid">
+                  <input type="text" class="filter-input" placeholder="Search products...">
+                  <select class="filter-input">
+                      <option value="">Featured designs</option>
+                      <option value="contemporary">Designs</option>
+                      <option value="traditional">Posters</option>
+                      <option value="mixed-media">Logos</option>
+                      <option value="digital">mockups</option>
+                  </select>
+                  <select class="filter-input">
+                      <option value="products"></option>
+                      <option value="west-africa">T-shirts</option>
+                      <option value="east-africa">Hoodies</option>
+                      <option value="north-africa">Shirts</option>
+                      <option value="south-africa">Pants</option>
+                  </select>
+                  <select class="filter-input">
+                      <option value="">Sort By</option>
+                      <option value="popularity">Popularity</option>
+                      <option value="recent">Most Recent</option>
+                      <option value="exhibitions">Most used</option>
+                  </select>
+              </div>
+          </div>
+      
+          <div class="tag-cloud-container" id="tagCloud"></div>
+      
+          <div class="artists-grid">
+              <div class="artist-card">
+                  <div class="artist-header">
+                      <img src="https://res.cloudinary.com/dfedn2xsg/image/upload/v1729261084/Aventis_jaspct.png" alt="Artist studio with paintings" width="100" height="100" class="artist-cover">
+                      <div class="featured-badge">Logos</div>
+                  </div>
+                  <div class="artist-info">
+                      <h3 class="artist-name">logos</h3>
+                      <p class="artist-specialty">High quality and animaterd logos</p>
+                      <p class="artist-bio">get a fully customized logo of your choice from aventis skilled designers and get it animated.</p>
+                      <div class="artist-stats">
+                          <div class="stat">
+                              <div class="stat-number">45</div>
+                              <div class="stat-label">orders</div>
+                          </div>
+                          <div class="stat">
+                              <div class="stat-number">1k</div>
+                              <div class="stat-label">views</div>
+                          </div>
+                          <div class="stat">
+                              <div class="stat-number">89</div>
+                              <div class="stat-label">satisfied customers</div>
+                          </div>
+                      </div>
+                      <div class="artist-tags">
+                          <span class="tag">graphic design</span>
+                          <span class="tag">Contemporary</span>
+                          <span class="tag">Social Impact</span>
+                      </div>
+                      <button class="connect-btn">Connect</button>
+                  </div>
+              </div>
+      
+              <div class="artist-card">
+                  <div class="artist-header">
+                      <img src="https://res.cloudinary.com/dfedn2xsg/image/upload/v1729699923/Screenshot_2024-10-23_165126_p4orv1.png" alt="Sculpture studio" class="artist-cover">
+                      <div class="featured-badge">mockups</div>
+                  </div>
+                  <div class="artist-info">
+                      <h3 class="artist-name">canvas mockups</h3>
+                      <p class="artist-specialty">3 mockups designs</p>
+                      <p class="artist-bio">get your logo,design,poster or even a picture placed on the above canvas</p>
+                      <div class="artist-stats">
+                          <div class="stat">
+                              <div class="stat-number">28</div>
+                              <div class="stat-label">orders</div>
+                          </div>
+                          <div class="stat">
+                              <div class="stat-number">1.2K</div>
+                              <div class="stat-label">views</div>
+                          </div>
+                          <div class="stat">
+                              <div class="stat-number">56</div>
+                              <div class="stat-label">satsfied customers</div>
+                          </div>
+                      </div>
+                      <div class="artist-tags">
+                          <span class="tag">designs</span>
+                          <span class="tag">mockups</span>
+                          <span class="tag">canvas</span>
+                      </div>
+                      <button class="connect-btn">Connect</button>
+                  </div>
+              </div>
+      
+              <div class="artist-card">
+                  <div class="artist-header">
+                      <img src="https://res.cloudinary.com/dfedn2xsg/image/upload/v1729700156/Screenshot_2024-10-23_172640_w3rsgq.png" alt="Digital art studio" class="artist-cover">
+                      <div class="featured-badge">Banners</div>
+                  </div>
+                  <div class="artist-info">
+                      <h3 class="artist-name">banner mockups</h3>
+                      <p class="artist-specialty">banner design</p>
+                      <p class="artist-bio">grow your social market influence by placing your logo, picture or design in our banners .</p>
+                      <div class="artist-stats">
+                          <div class="stat">
+                              <div class="stat-number">15</div>
+                              <div class="stat-label">orders</div>
+                          </div>
+                          <div class="stat">
+                              <div class="stat-number">821</div>
+                              <div class="stat-label">views</div>
+                          </div>
+                          <div class="stat">
+                              <div class="stat-number">120</div>
+                              <div class="stat-label">satisfied customers</div>
+                          </div>
+                      </div>
+                      <div class="artist-tags">
+                          <span class="tag">mockup</span>
+                          <span class="tag">designs</span>
+                          <span class="tag">Banners</span>
+                      </div>
+                      <button class="connect-btn">Connect & Collaborate</button>
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+      <script>
+      // Tag Cloud Animation
+      const tags = [
+          'Contemporary', 'Traditional', 'Sculpture', 'Painting',
+          'Digital Art', 'Mixed Media', 'Photography', 'Installation',
+          'Performance', 'Textile Art', 'Ceramics', 'Printmaking',
+          'Animation', 'Street Art', 'Conceptual Art', 'Folk Art'
+      ];
+      
+      const tagCloud = TagCloud('.tag-cloud-container', tags, {
+          radius: 230,
+          maxSpeed: 'fast',
+          initSpeed: 'fast',
+          direction: 135,
+          keep: true,
+          useContainerInlineStyles: true,
+          containerClass: 'tag-cloud',
+          itemClass: 'tag-cloud-item',
+          useHTML: true
+      });
+      
+      // GSAP Animations
+      gsap.from(".artist-card", {
+          duration: 1,
+          y: 100,
+          opacity: 0,
+          stagger: 0.2,
+          ease: "power2.out"
+      });
+      
+      // Artist Card Hover Effects
+      document.querySelectorAll('.artist-card').forEach(card => {
+          card.addEventListener('mouseenter', () => {
+              gsap.to(card, {
+                  scale: 1.02,
+                  duration: 0.3
+              });
+          });
+      
+          card.addEventListener('mouseleave', () => {
+              gsap.to(card, {
+                  scale: 1,
+                  duration: 0.3
+              });
+          });
+      });
+      
+      // Connect Button Animation
+      document.querySelectorAll('.connect-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+              gsap.to(e.target, {
+                  scale: 0.95,
+                  duration: 0.1,
+                  yoyo: true,
+                  repeat: 1
+              });
+          });
+      });
+      
+      // Filter Animation
+      document.querySelectorAll('.filter-input').forEach(input => {
+          input.addEventListener('change', () => {
+              gsap.from(".artists-grid", {
+                  duration: 0.5,
+                  opacity: 0,
+                  y: 20,
+                  ease: "power2.out"
+              });
+          });
+      });
+      </script>
+      
+      </body>
+      </html>      
