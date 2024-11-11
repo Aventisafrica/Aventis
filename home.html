@@ -613,25 +613,56 @@ nav {
       </div>
     </section>
     
-    <section class="contact-section container">
-      <div class="contact-form">
-        <h2>Send Us a Message</h2>
-        <form id="contact-form">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-          
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-          
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" required>
-          
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-          
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-      </div>
+     <section class="contact-section container">
+        <div class="contact-form">
+          <h2>Send Us a Message</h2>
+          <form id="contact-form"  onsubmit="SendMail(event)">
+            <label for="name">Name</label>
+            <input type="text" id="fullName" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email_id" name="email" required>
+            
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit" class="btn" >Send Message</button>
+          </form>
+        </div>
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+          (function(){
+            emailjs.init({
+              publicKey: "b52uj0sDwmDYxRuNc",
+            });
+          })();
+        </script>
+        <script>
+          function SendMail(event){
+              event.preventDefault();
+              var params ={
+                  from_name:document.getElementById("fullName").value,
+                  email_id:document.getElementById("email_id").value,
+                  subject:document.getElementById("subject").value,
+                  message:document.getElementById("message").value,
+              }
+              emailjs.send("service_k19fifo","template_2ib3wau", params)
+              .then(function(response) {
+                  alert("success ! " + response.status);
+              })
+              .catch(function(error) {
+                  alert("Failed to send message. Error: " + error.text);
+                });
+           }
+       </script>
       
       <div class="contact-info">
         <h2>Contact Information</h2>
