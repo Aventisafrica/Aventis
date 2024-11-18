@@ -306,15 +306,32 @@ nav {
         </div>
         <div class="stat-card">
             <div class="stat-title">Revenue Generated</div>
-            <div class="stat-value">ksh11,465.14</div>
-            <div class="stat-change">+Ksh56,620.82 this month</div>
+            <div class="stat-value">ksh32,313.14</div>
+            <div class="stat-change">+Ksh74,542.21 this month</div>
         </div>
     </div>
     
     <div class="chart-container">
         <canvas id="eventsChart"></canvas>
     </div>
-    
+ 
+    <div class="events-grid">
+        <div class="event-card">
+            <img src="https://cdn-az.allevents.in/events3/banners/f109be92c864552e26ecada2542dcd2bd93729621a0c0b620d3debaf6281946d-rimg-w1200-h675-dc577c56-gmir?v=1731680690" alt="Contemporary Art Exhibition, vibrant gallery space with modern artwork" class="event-image">
+            <div class="event-details">
+                <span class="event-status status-active">Active</span>
+                <h3 class="event-title">Terra Fair</h3>
+                <p> <img src="https://cdn-az.allevents.in/events3/banners/f109be92c864552e26ecada2542dcd2bd93729621a0c0b620d3debaf6281946d-rimg-w1200-h675-dc577c56-gmir?v=1731680690" alt="Contemporary Art Exhibition, vibrant gallery space with modern artwork"> Join us in making a positive impact on our planet by presenting your product or brand and attract new customers and enhance your market presence in an environment that celebrates local artisans, businesses and eco-conscious practices. A day of shopping, fun and community awaits!</p>
+                <div class="event-meta">
+                    <span>📅 Nov 15-23 10p:m</span>
+                    <span>👥 - Attendees</span>
+                </div>
+                <div class="event-actions">
+                 
+                </div>
+            </div>
+        </div>   
+
     <div class="events-grid">
         <div class="event-card">
             <img src="https://files.ocula.com/anzax/df/df43c355-b584-49fb-bbd0-2f14f8c67932_360_200.jpg" alt="Contemporary Art Exhibition, vibrant gallery space with modern artwork" class="event-image">
@@ -334,11 +351,11 @@ nav {
         <div class="event-card">
             <img src="https://files.ocula.com/anzax/8e/8ebb8a9d-2155-4de2-90bb-7e888acbd629_360_200.jpg" alt="Traditional Art Workshop, warm-toned workshop space with art supplies" class="event-image">
             <div class="event-details">
-                <span class="event-status status-draft">ended</span>
+                <span class="event-status status-ended">ended</span>
                 <h3 class="event-title">Traditional Art Workshop</h3>
                 <div class="event-meta">
                     <span>📅 Sep 5-6</span>
-                    <span>👥 203 Attendees</span>
+                    <span>👥 356 Attendees</span>
                 </div>
                 <div class="event-actions">
                     
@@ -349,7 +366,7 @@ nav {
         <div class="event-card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQznKOk_-tG7iZn5iqsbtgoHDZXoW_G-JauSqKeDIGv-uOdLuh9SSLAWGoqUIS6c8n-1Y&usqp=CAU" alt="Sakasiri the maze event opn Nairobi Ngong road" class="event-image">
             <div class="event-details">
-                <span class="event-status status-ended">active</span>
+                <span class="event-status status-ended">ended</span>
                 <h3 class="event-title">Sakasiri the Maze</h3>
                 <div class="event-meta">
                     <span>📅 Nov 1-10</span>
@@ -369,10 +386,10 @@ const ctx = document.getElementById('eventsChart').getContext('2d');
 new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        labels: ['Jan','Feb','Mar','May','Jun','Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
             label: 'Event Attendees',
-            data: [150, 220, 180, 290, 310, 350],
+            data: [526,423,556,224,345,310, 156, 256, 120, 37, 0],
             borderColor: '#FFD700',
             tension: 0.4,
             fill: false
